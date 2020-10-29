@@ -20,9 +20,6 @@ internal class RelativeFormatterLanguagesCache {
     private(set) var cachedValues = [String: [String: Any]]()
     
     func flavoursForLocaleID(_ langID: String) -> [String: Any]? {
-        if let cachedFlavour = cachedValues[langID] {
-            return cachedFlavour
-        }
         do {
             
             guard let cachedValue = cachedValues[langID] else {
